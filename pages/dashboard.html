@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Chordia</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/dashboard.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-guitar"></i>
+                <span>Chordia</span>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="songs.html" class="nav-link">Songs</a>
+                <a href="chords.html" class="nav-link">Chords</a>
+                <a href="tuner.html" class="nav-link">Tuner</a>
+                <a href="dashboard.html" class="nav-link active">Dashboard</a>
+                <a href="profile.html" class="nav-link"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Dashboard -->
+    <section class="dashboard">
+        <div class="container">
+            <div class="dashboard-header">
+                <h1>Welcome back, Guitarist!</h1>
+                <p>Keep up your amazing progress</p>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-content">
+                        <p class="stat-label">Total XP</p>
+                        <p class="stat-value">2,450</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-content">
+                        <p class="stat-label">Current Level</p>
+                        <p class="stat-value">12</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="stat-content">
+                        <p class="stat-label">Practice Streak</p>
+                        <p class="stat-value">42 days</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="stat-content">
+                        <p class="stat-label">Achievements</p>
+                        <p class="stat-value">18</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="dashboard-main">
+                <!-- Progress Section -->
+                <div class="dashboard-card">
+                    <h2>Your Progress</h2>
+                    <div class="progress-section">
+                        <div class="progress-item">
+                            <div class="progress-header">
+                                <span>Level 12 → Level 13</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="progress-stats">
+                            <p><strong>1,875 / 2,500</strong> XP needed for next level</p>
+                            <p>Keep practicing! <strong>3,000 XP</strong> more songs will boost you.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="dashboard-card">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <i class="fas fa-check-circle"></i>
+                            <div class="activity-content">
+                                <p class="activity-title">Completed "Shape of You"</p>
+                                <p class="activity-time">2 hours ago</p>
+                            </div>
+                            <p class="activity-xp">+250 XP</p>
+                        </div>
+                        <div class="activity-item">
+                            <i class="fas fa-music"></i>
+                            <div class="activity-content">
+                                <p class="activity-title">Tuned your guitar</p>
+                                <p class="activity-time">5 hours ago</p>
+                            </div>
+                            <p class="activity-xp">+50 XP</p>
+                        </div>
+                        <div class="activity-item">
+                            <i class="fas fa-book"></i>
+                            <div class="activity-content">
+                                <p class="activity-title">Learned Em and Am chords</p>
+                                <p class="activity-time">Yesterday</p>
+                            </div>
+                            <p class="activity-xp">+150 XP</p>
+                        </div>
+                        <div class="activity-item">
+                            <i class="fas fa-flame"></i>
+                            <div class="activity-content">
+                                <p class="activity-title">42 day practice streak started</p>
+                                <p class="activity-time">42 days ago</p>
+                            </div>
+                            <p class="activity-xp">+500 XP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="dashboard-sidebar">
+                <!-- Achievements -->
+                <div class="dashboard-card">
+                    <h3>Latest Achievements</h3>
+                    <div class="achievements-list">
+                        <div class="achievement">
+                            <i class="fas fa-medal"></i>
+                            <p>First Song</p>
+                        </div>
+                        <div class="achievement">
+                            <i class="fas fa-fire"></i>
+                            <p>7-Day Streak</p>
+                        </div>
+                        <div class="achievement">
+                            <i class="fas fa-star"></i>
+                            <p>Chord Master</p>
+                        </div>
+                        <div class="achievement locked">
+                            <i class="fas fa-lock"></i>
+                            <p>100 Songs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="dashboard-card">
+                    <h3>Quick Actions</h3>
+                    <div class="quick-links">
+                        <a href="songs.html" class="quick-link">
+                            <i class="fas fa-book"></i>
+                            <span>Browse Songs</span>
+                        </a>
+                        <a href="chords.html" class="quick-link">
+                            <i class="fas fa-guitar"></i>
+                            <span>Learn Chords</span>
+                        </a>
+                        <a href="tuner.html" class="quick-link">
+                            <i class="fas fa-microphone"></i>
+                            <span>Tune Guitar</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>
