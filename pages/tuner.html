@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guitar Tuner - Chordia</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/tuner.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-guitar"></i>
+                <span>Chordia</span>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="songs.html" class="nav-link">Songs</a>
+                <a href="chords.html" class="nav-link">Chords</a>
+                <a href="tuner.html" class="nav-link active">Tuner</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="profile.html" class="nav-link"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tuner Section -->
+    <section class="tuner-section">
+        <div class="container">
+            <div class="tuner-header">
+                <h1>AI-Powered Guitar Tuner</h1>
+                <p>Accurate tuning for every string</p>
+            </div>
+
+            <div class="tuner-container">
+                <!-- Tuner Display -->
+                <div class="tuner-display">
+                    <div class="tuner-main">
+                        <!-- Frequency Meter -->
+                        <div class="frequency-meter">
+                            <div class="meter-needle" id="meterNeedle"></div>
+                            <div class="meter-background">
+                                <div class="meter-mark left"></div>
+                                <div class="meter-mark center"></div>
+                                <div class="meter-mark right"></div>
+                            </div>
+                        </div>
+
+                        <!-- Current Note -->
+                        <div class="note-display">
+                            <div class="note-value" id="noteValue">--</div>
+                            <div class="note-status" id="noteStatus">Initialize tuner</div>
+                        </div>
+
+                        <!-- Cents Display -->
+                        <div class="cents-display">
+                            <span id="centsValue">0</span> cents
+                        </div>
+
+                        <!-- Mic Button -->
+                        <button class="mic-button" id="micButton">
+                            <i class="fas fa-microphone"></i>
+                            <span>Start Tuning</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tuning Reference -->
+                <div class="tuning-reference">
+                    <h2>Standard Tuning</h2>
+                    <div class="string-buttons">
+                        <button class="string-btn" data-note="E" data-freq="82.41">
+                            <span class="string-num">6</span>
+                            <span class="string-note">E</span>
+                            <span class="string-freq">82 Hz</span>
+                        </button>
+                        <button class="string-btn" data-note="A" data-freq="110.00">
+                            <span class="string-num">5</span>
+                            <span class="string-note">A</span>
+                            <span class="string-freq">110 Hz</span>
+                        </button>
+                        <button class="string-btn" data-note="D" data-freq="146.83">
+                            <span class="string-num">4</span>
+                            <span class="string-note">D</span>
+                            <span class="string-freq">147 Hz</span>
+                        </button>
+                        <button class="string-btn" data-note="G" data-freq="196.00">
+                            <span class="string-num">3</span>
+                            <span class="string-note">G</span>
+                            <span class="string-freq">196 Hz</span>
+                        </button>
+                        <button class="string-btn" data-note="B" data-freq="246.94">
+                            <span class="string-num">2</span>
+                            <span class="string-note">B</span>
+                            <span class="string-freq">247 Hz</span>
+                        </button>
+                        <button class="string-btn" data-note="E" data-freq="329.63">
+                            <span class="string-num">1</span>
+                            <span class="string-note">E</span>
+                            <span class="string-freq">330 Hz</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tuner Info -->
+                <div class="tuner-info">
+                    <div class="info-card">
+                        <i class="fas fa-info-circle"></i>
+                        <h3>How to Use</h3>
+                        <ol>
+                            <li>Click "Start Tuning" button</li>
+                            <li>Allow microphone access</li>
+                            <li>Play each string</li>
+                            <li>Adjust until centered</li>
+                        </ol>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-microphone"></i>
+                        <h3>Requirements</h3>
+                        <ul>
+                            <li>Microphone enabled</li>
+                            <li>Quiet environment</li>
+                            <li>Modern browser</li>
+                            <li>Working audio input</li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Pro Tips</h3>
+                        <ul>
+                            <li>Tune strings individually</li>
+                            <li>Let the note sustain</li>
+                            <li>Move closer to mic</li>
+                            <li>Tune from low to high</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/tuner.js"></script>
+</body>
+</html>
