@@ -1,0 +1,305 @@
+/* Tuner Styles */
+
+.tuner-section {
+    padding: 4rem var(--spacing-md);
+    min-height: calc(100vh - 70px);
+}
+
+.tuner-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.tuner-header h1 {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.tuner-header p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+.tuner-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-3xl);
+}
+
+/* Tuner Display */
+.tuner-display {
+    background-color: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-3xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tuner-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-2xl);
+}
+
+/* Frequency Meter */
+.frequency-meter {
+    position: relative;
+    width: 250px;
+    height: 150px;
+    background: linear-gradient(180deg, var(--background) 0%, var(--surface-light) 100%);
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--border-color);
+    overflow: hidden;
+}
+
+.meter-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: var(--spacing-md) 0;
+}
+
+.meter-mark {
+    width: 2px;
+    height: 20px;
+    background-color: var(--border-color);
+}
+
+.meter-mark.center {
+    height: 30px;
+    background-color: var(--primary-color);
+    width: 3px;
+}
+
+.meter-needle {
+    position: absolute;
+    width: 4px;
+    height: 120px;
+    background: linear-gradient(180deg, var(--primary-color) 0%, var(--primary-light) 100%);
+    left: 50%;
+    top: 15px;
+    transform-origin: top center;
+    transform: translateX(-50%) rotate(0deg);
+    transition: transform 0.1s ease;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+
+/* Note Display */
+.note-display {
+    text-align: center;
+}
+
+.note-value {
+    font-size: 4rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.note-status {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.cents-display {
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    font-weight: var(--font-weight-semibold);
+}
+
+/* Mic Button */
+.mic-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+    width: 200px;
+    padding: var(--spacing-lg) var(--spacing-2xl);
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--radius-lg);
+    font-size: 1.1rem;
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.mic-button:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-emerald);
+}
+
+.mic-button:active {
+    transform: translateY(0);
+}
+
+.mic-button i {
+    font-size: 1.5rem;
+}
+
+/* Tuning Reference */
+.tuning-reference {
+    background-color: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-2xl);
+}
+
+.tuning-reference h2 {
+    margin-bottom: var(--spacing-lg);
+    color: var(--text-primary);
+}
+
+.string-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.string-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-lg);
+    background-color: var(--background);
+    border: 2px solid var(--border-color);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.string-btn:hover {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.string-num {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-xs);
+}
+
+.string-btn:hover .string-num {
+    color: white;
+}
+
+.string-note {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-color);
+}
+
+.string-btn:hover .string-note {
+    color: white;
+}
+
+.string-freq {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-top: var(--spacing-xs);
+}
+
+.string-btn:hover .string-freq {
+    color: white;
+}
+
+/* Tuner Info */
+.tuner-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-3xl);
+}
+
+.info-card {
+    background-color: var(--surface);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+}
+
+.info-card i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-md);
+}
+
+.info-card h3 {
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+.info-card ol,
+.info-card ul {
+    margin: 0;
+    padding-left: var(--spacing-lg);
+}
+
+.info-card li {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Responsive Tuner */
+@media (max-width: 768px) {
+    .tuner-container {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-2xl);
+    }
+
+    .string-buttons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .frequency-meter {
+        width: 200px;
+        height: 120px;
+    }
+
+    .meter-needle {
+        height: 90px;
+    }
+
+    .note-value {
+        font-size: 3rem;
+    }
+
+    .tuner-header h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .tuner-display {
+        padding: var(--spacing-lg);
+    }
+
+    .string-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tuner-info {
+        grid-template-columns: 1fr;
+    }
+
+    .frequency-meter {
+        width: 150px;
+        height: 100px;
+    }
+
+    .note-value {
+        font-size: 2rem;
+    }
+}
