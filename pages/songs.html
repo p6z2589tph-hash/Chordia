@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Songs - Chordia</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/content.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-guitar"></i>
+                <span>Chordia</span>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="songs.html" class="nav-link active">Songs</a>
+                <a href="chords.html" class="nav-link">Chords</a>
+                <a href="tuner.html" class="nav-link">Tuner</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="profile.html" class="nav-link"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Songs Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="content-header">
+                <h1>Learn Guitar Through Songs</h1>
+                <p>Discover thousands of songs with chord progressions and tabs</p>
+            </div>
+
+            <!-- Search & Filter -->
+            <div class="search-filter">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchSongs" placeholder="Search songs, artists...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="beginner">Beginner</button>
+                    <button class="filter-btn" data-filter="intermediate">Intermediate</button>
+                    <button class="filter-btn" data-filter="advanced">Advanced</button>
+                </div>
+            </div>
+
+            <!-- Songs Grid -->
+            <div class="content-grid">
+                <!-- Song Card 1 -->
+                <div class="song-card" data-difficulty="beginner">
+                    <div class="song-image">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="song-info">
+                        <h3>Shape of You</h3>
+                        <p class="artist">Ed Sheeran</p>
+                        <div class="song-meta">
+                            <span class="difficulty beginner">Beginner</span>
+                            <span class="chords">4 chords</span>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%; margin-top: 12px;">Learn</button>
+                    </div>
+                </div>
+
+                <!-- Song Card 2 -->
+                <div class="song-card" data-difficulty="beginner">
+                    <div class="song-image">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="song-info">
+                        <h3>Wonderwall</h3>
+                        <p class="artist">Oasis</p>
+                        <div class="song-meta">
+                            <span class="difficulty beginner">Beginner</span>
+                            <span class="chords">5 chords</span>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%; margin-top: 12px;">Learn</button>
+                    </div>
+                </div>
+
+                <!-- Song Card 3 -->
+                <div class="song-card" data-difficulty="beginner">
+                    <div class="song-image">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="song-info">
+                        <h3>Knocking on Heaven's Door</h3>
+                        <p class="artist">Bob Dylan</p>
+                        <div class="song-meta">
+                            <span class="difficulty beginner">Beginner</span>
+                            <span class="chords">3 chords</span>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%; margin-top: 12px;">Learn</button>
+                    </div>
+                </div>
+
+                <!-- Song Card 4 -->
+                <div class="song-card" data-difficulty="intermediate">
+                    <div class="song-image">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="song-info">
+                        <h3>Hotel California</h3>
+                        <p class="artist">The Eagles</p>
+                        <div class="song-meta">
+                            <span class="difficulty intermediate">Intermediate</span>
+                            <span class="chords">6 chords</span>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%; margin-top: 12px;">Learn</button>
+                    </div>
+                </div>
+
+                <!-- Song Card 5 -->
+                <div class="song-card" data-difficulty="intermediate">
+                    <div class="song-image">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="song-info">
+                        <h3>Stairway to Heaven</h3>
+                        <p class="artist">Led Zeppelin</p>
+                        <div class="song-meta">
+                            <span class="difficulty intermediate">Intermediate</span>
+                            <span class="chords">8 chords</span>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%; margin-top: 12px;">Learn</button>
+                    </div>
+                </div>
+
+                <!-- Song Card 6 -->
+                <div class="song-card" data-difficulty="advanced">
+                    <div class="song-image">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="song-info">
+                        <h3>Comfortably Numb</h3>
+                        <p class="artist">Pink Floyd</p>
+                        <div class="song-meta">
+                            <span class="difficulty advanced">Advanced</span>
+                            <span class="chords">12 chords</span>
+                        </div>
+                        <button class="btn btn-primary" style="width: 100%; margin-top: 12px;">Learn</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/content.js"></script>
+</body>
+</html>
