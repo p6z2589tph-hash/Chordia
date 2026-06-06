@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Chords - Chordia</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/content.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-guitar"></i>
+                <span>Chordia</span>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="songs.html" class="nav-link">Songs</a>
+                <a href="chords.html" class="nav-link active">Chords</a>
+                <a href="tuner.html" class="nav-link">Tuner</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="profile.html" class="nav-link"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Chords Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="content-header">
+                <h1>Interactive Chord Library</h1>
+                <p>Master essential guitar chords with finger placement guides</p>
+            </div>
+
+            <!-- Search & Filter -->
+            <div class="search-filter">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchChords" placeholder="Search chords (e.g., Am, C, G)...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="major">Major</button>
+                    <button class="filter-btn" data-filter="minor">Minor</button>
+                    <button class="filter-btn" data-filter="seventh">Seventh</button>
+                </div>
+            </div>
+
+            <!-- Chords Grid -->
+            <div class="content-grid">
+                <!-- Chord Card 1 -->
+                <div class="chord-card" data-type="major">
+                    <div class="chord-diagram">
+                        <i class="fas fa-fan"></i>
+                    </div>
+                    <h3>C Major</h3>
+                    <p>A bright, open chord. Perfect for beginners.</p>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 12px;">View Guide</button>
+                </div>
+
+                <!-- Chord Card 2 -->
+                <div class="chord-card" data-type="minor">
+                    <div class="chord-diagram">
+                        <i class="fas fa-fan"></i>
+                    </div>
+                    <h3>A Minor</h3>
+                    <p>A sad, dark sound. Used in many songs.</p>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 12px;">View Guide</button>
+                </div>
+
+                <!-- Chord Card 3 -->
+                <div class="chord-card" data-type="major">
+                    <div class="chord-diagram">
+                        <i class="fas fa-fan"></i>
+                    </div>
+                    <h3>G Major</h3>
+                    <p>A warm, full chord. Essential for beginners.</p>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 12px;">View Guide</button>
+                </div>
+
+                <!-- Chord Card 4 -->
+                <div class="chord-card" data-type="major">
+                    <div class="chord-diagram">
+                        <i class="fas fa-fan"></i>
+                    </div>
+                    <h3>D Major</h3>
+                    <p>A bright, resonant sound popular in many genres.</p>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 12px;">View Guide</button>
+                </div>
+
+                <!-- Chord Card 5 -->
+                <div class="chord-card" data-type="minor">
+                    <div class="chord-diagram">
+                        <i class="fas fa-fan"></i>
+                    </div>
+                    <h3>E Minor</h3>
+                    <p>Similar to Am, versatile and widely used.</p>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 12px;">View Guide</button>
+                </div>
+
+                <!-- Chord Card 6 -->
+                <div class="chord-card" data-type="seventh">
+                    <div class="chord-diagram">
+                        <i class="fas fa-fan"></i>
+                    </div>
+                    <h3>B7</h3>
+                    <p>A blues chord. Great for more complex progressions.</p>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 12px;">View Guide</button>
+                </div>
+
+                <!-- Chord Card 7 -->
+                <div class="chord-card" data-type="major">
+                    <div class="chord-diagram">
+                        <i class="fas fa-fan"></i>
+                    </div>
+                    <h3>E Major</h3>
+                    <p>A bright, energetic chord. Good for practice.</p>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 12px;">View Guide</button>
+                </div>
+
+                <!-- Chord Card 8 -->
+                <div class="chord-card" data-type="seventh">
+                    <div class="chord-diagram">
+                        <i class="fas fa-fan"></i>
+                    </div>
+                    <h3>D7</h3>
+                    <p>A seventh chord variation for blues and jazz.</p>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 12px;">View Guide</button>
+                </div>
+
+                <!-- Chord Card 9 -->
+                <div class="chord-card" data-type="minor">
+                    <div class="chord-diagram">
+                        <i class="fas fa-fan"></i>
+                    </div>
+                    <h3>B Minor</h3>
+                    <p>A complex chord for intermediate players.</p>
+                    <button class="btn btn-primary" style="width: 100%; margin-top: 12px;">View Guide</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/content.js"></script>
+</body>
+</html>
