@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Time Zone Clock</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-globe"></i> World Time Zone Clock</h1>
+            <p>Current time across different time zones</p>
+        </header>
+
+        <!-- Search and Add Section -->
+        <div class="controls">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search time zones...">
+            </div>
+            <button class="btn btn-primary" id="addBtn">
+                <i class="fas fa-plus"></i> Add Time Zone
+            </button>
+        </div>
+
+        <!-- Time Zones Grid -->
+        <div class="clocks-grid" id="clocksGrid">
+            <!-- Clock cards will be added here by JavaScript -->
+        </div>
+
+        <!-- Modal for Adding Time Zone -->
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Add Time Zone</h2>
+                    <button class="close-btn" id="closeBtn">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="timezoneSelect">Select Time Zone:</label>
+                        <select id="timezoneSelect">
+                            <option value="">Choose a time zone...</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="labelInput">Label (Optional):</label>
+                        <input type="text" id="labelInput" placeholder="e.g., My Office, Home">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" id="cancelBtn">Cancel</button>
+                    <button class="btn btn-primary" id="confirmBtn">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
