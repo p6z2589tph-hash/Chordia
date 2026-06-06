@@ -1,0 +1,248 @@
+/* Settings Styles */
+
+.settings-section {
+    padding: 4rem var(--spacing-md);
+    min-height: calc(100vh - 70px);
+}
+
+.settings-header {
+    margin-bottom: 3rem;
+}
+
+.settings-header h1 {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-md);
+}
+
+.settings-header p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+.settings-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: var(--spacing-3xl);
+}
+
+/* Settings Sidebar */
+.settings-sidebar {
+    background-color: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    height: fit-content;
+    position: sticky;
+    top: 90px;
+}
+
+.settings-nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+}
+
+.settings-nav-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    width: 100%;
+    padding: var(--spacing-md) var(--spacing-lg);
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-radius: var(--radius-md);
+    font-weight: var(--font-weight-medium);
+    transition: all var(--transition-base);
+    text-align: left;
+}
+
+.settings-nav-item:hover {
+    background-color: var(--background);
+    color: var(--primary-color);
+}
+
+.settings-nav-item.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.settings-nav-item i {
+    font-size: 1.1rem;
+}
+
+/* Settings Content */
+.settings-content {
+    background-color: var(--surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-2xl);
+}
+
+.settings-tab {
+    display: none;
+}
+
+.settings-tab.active {
+    display: block;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.settings-tab h2 {
+    margin-bottom: var(--spacing-2xl);
+    color: var(--text-primary);
+}
+
+/* Settings Group */
+.settings-group {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.settings-group label {
+    display: block;
+    margin-bottom: var(--spacing-md);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-primary);
+}
+
+.settings-group input[type="text"],
+.settings-group input[type="email"],
+.settings-group input[type="number"],
+.settings-group textarea,
+.settings-group select {
+    width: 100%;
+    padding: var(--spacing-md);
+    background-color: var(--background);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: all var(--transition-base);
+}
+
+.settings-group input:focus,
+.settings-group textarea:focus,
+.settings-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+.form-help {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-top: var(--spacing-sm) !important;
+}
+
+/* Checkbox Label */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    cursor: pointer;
+    margin: 0;
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+/* Theme Options */
+.theme-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+}
+
+.theme-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+    cursor: pointer;
+}
+
+.theme-option input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.theme-preview {
+    width: 100%;
+    height: 100px;
+    border-radius: var(--radius-md);
+    border: 2px solid var(--border-color);
+    transition: all var(--transition-base);
+}
+
+.theme-preview.dark {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.theme-preview.light {
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+}
+
+.theme-preview.auto {
+    background: linear-gradient(135deg, #0f172a 0%, #f1f5f9 100%);
+}
+
+.theme-option input[type="radio"]:checked + .theme-preview,
+.theme-option input[type="radio"]:checked ~ .theme-preview {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+/* Responsive Settings */
+@media (max-width: 768px) {
+    .settings-container {
+        grid-template-columns: 1fr;
+    }
+
+    .settings-sidebar {
+        position: static;
+        width: 100%;
+    }
+
+    .settings-nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+
+    .settings-nav-item {
+        padding: var(--spacing-md);
+    }
+
+    .settings-header h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .settings-nav {
+        grid-template-columns: 1fr;
+    }
+
+    .theme-options {
+        grid-template-columns: 1fr;
+    }
+
+    .settings-content {
+        padding: var(--spacing-lg);
+    }
+}

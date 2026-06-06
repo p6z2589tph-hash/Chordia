@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Chordia</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/settings.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <i class="fas fa-guitar"></i>
+                <span>Chordia</span>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="songs.html" class="nav-link">Songs</a>
+                <a href="chords.html" class="nav-link">Chords</a>
+                <a href="tuner.html" class="nav-link">Tuner</a>
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+                <a href="profile.html" class="nav-link"><i class="fas fa-user"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Settings Section -->
+    <section class="settings-section">
+        <div class="container">
+            <div class="settings-header">
+                <h1>Settings</h1>
+                <p>Manage your account and preferences</p>
+            </div>
+
+            <div class="settings-container">
+                <!-- Settings Sidebar -->
+                <div class="settings-sidebar">
+                    <nav class="settings-nav">
+                        <button class="settings-nav-item active" data-tab="account">
+                            <i class="fas fa-user"></i>
+                            Account
+                        </button>
+                        <button class="settings-nav-item" data-tab="learning">
+                            <i class="fas fa-book"></i>
+                            Learning
+                        </button>
+                        <button class="settings-nav-item" data-tab="notifications">
+                            <i class="fas fa-bell"></i>
+                            Notifications
+                        </button>
+                        <button class="settings-nav-item" data-tab="privacy">
+                            <i class="fas fa-lock"></i>
+                            Privacy
+                        </button>
+                        <button class="settings-nav-item" data-tab="appearance">
+                            <i class="fas fa-palette"></i>
+                            Appearance
+                        </button>
+                    </nav>
+                </div>
+
+                <!-- Settings Content -->
+                <div class="settings-content">
+                    <!-- Account Settings -->
+                    <div class="settings-tab active" id="account">
+                        <h2>Account Settings</h2>
+
+                        <div class="settings-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="john@example.com">
+                            <p class="form-help">Your primary email address</p>
+                        </div>
+
+                        <div class="settings-group">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="John Guitarist">
+                        </div>
+
+                        <div class="settings-group">
+                            <label>Username</label>
+                            <input type="text" placeholder="johnguitarist">
+                        </div>
+
+                        <div class="settings-group">
+                            <label>Bio</label>
+                            <textarea placeholder="Tell us about yourself..." rows="4"></textarea>
+                        </div>
+
+                        <button class="btn btn-primary">Save Changes</button>
+                    </div>
+
+                    <!-- Learning Settings -->
+                    <div class="settings-tab" id="learning">
+                        <h2>Learning Preferences</h2>
+
+                        <div class="settings-group">
+                            <label>Difficulty Level</label>
+                            <select>
+                                <option>Beginner</option>
+                                <option selected>Intermediate</option>
+                                <option>Advanced</option>
+                            </select>
+                        </div>
+
+                        <div class="settings-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked>
+                                Show difficulty warnings
+                            </label>
+                        </div>
+
+                        <div class="settings-group">
+                            <label>Daily Practice Goal (minutes)</label>
+                            <input type="number" value="30">
+                        </div>
+
+                        <div class="settings-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked>
+                                Enable practice reminders
+                            </label>
+                        </div>
+
+                        <button class="btn btn-primary">Save Preferences</button>
+                    </div>
+
+                    <!-- Notification Settings -->
+                    <div class="settings-tab" id="notifications">
+                        <h2>Notification Settings</h2>
+
+                        <div class="settings-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked>
+                                Email notifications
+                            </label>
+                            <p class="form-help">Receive emails about your learning progress</p>
+                        </div>
+
+                        <div class="settings-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked>
+                                Achievement notifications
+                            </label>
+                            <p class="form-help">Get notified when you earn achievements</p>
+                        </div>
+
+                        <div class="settings-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                Marketing emails
+                            </label>
+                            <p class="form-help">Receive updates about new features and promotions</p>
+                        </div>
+
+                        <div class="settings-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked>
+                                Streak reminders
+                            </label>
+                            <p class="form-help">Remind me to maintain my practice streak</p>
+                        </div>
+
+                        <button class="btn btn-primary">Save Notification Settings</button>
+                    </div>
+
+                    <!-- Privacy Settings -->
+                    <div class="settings-tab" id="privacy">
+                        <h2>Privacy & Security</h2>
+
+                        <div class="settings-group">
+                            <label>Profile Visibility</label>
+                            <select>
+                                <option>Public</option>
+                                <option selected>Friends Only</option>
+                                <option>Private</option>
+                            </select>
+                        </div>
+
+                        <div class="settings-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                Show my statistics publicly
+                            </label>
+                        </div>
+
+                        <div class="settings-group">
+                            <button class="btn btn-secondary" style="width: 100%;">
+                                <i class="fas fa-lock"></i> Change Password
+                            </button>
+                        </div>
+
+                        <div class="settings-group">
+                            <button class="btn btn-secondary" style="width: 100%;">
+                                <i class="fas fa-shield-alt"></i> Enable Two-Factor Auth
+                            </button>
+                        </div>
+
+                        <button class="btn btn-primary">Save Privacy Settings</button>
+                    </div>
+
+                    <!-- Appearance Settings -->
+                    <div class="settings-tab" id="appearance">
+                        <h2>Appearance</h2>
+
+                        <div class="settings-group">
+                            <label>Theme</label>
+                            <div class="theme-options">
+                                <label class="theme-option active">
+                                    <input type="radio" name="theme" checked>
+                                    <span class="theme-preview dark"></span>
+                                    Dark
+                                </label>
+                                <label class="theme-option">
+                                    <input type="radio" name="theme">
+                                    <span class="theme-preview light"></span>
+                                    Light
+                                </label>
+                                <label class="theme-option">
+                                    <input type="radio" name="theme">
+                                    <span class="theme-preview auto"></span>
+                                    Auto
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="settings-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked>
+                                Animations enabled
+                            </label>
+                        </div>
+
+                        <div class="settings-group">
+                            <label>Font Size</label>
+                            <select>
+                                <option>Small</option>
+                                <option selected>Medium</option>
+                                <option>Large</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-primary">Save Appearance</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/settings.js"></script>
+</body>
+</html>
